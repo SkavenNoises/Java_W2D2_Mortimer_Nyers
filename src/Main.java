@@ -1,4 +1,9 @@
-// Exercise 1
+
+/*
+#########################################################
+Exercise 1
+#########################################################
+*/
 abstract class Dog {
 	// Abstract method to display how much this dog eats, specific to child class
 	public abstract void eats();
@@ -16,10 +21,43 @@ class SpringerSpaniel extends Dog {
 	}
 }
 
+
+/*
+#########################################################
+Exercise 2
+#########################################################
+*/
+interface Animal {
+	void speak();
+	void eat();
+}
+
+class Cat implements Animal {
+	public void speak() {
+		System.out.println("Meow");
+	}
+
+	public void eat() {
+		System.out.println("Cat has eaten 25g of food");
+	}
+}
+
+/*
+######################################################
+Exercise 3
+#########################################################
+*/
+
+
+
 public class Main {
 	public static void main(String[] args) {
 		SpringerSpaniel mDog = new SpringerSpaniel();
 		mDog.eats();
 		mDog.bark();
+
+		Cat mCat = new Cat();
+		mCat.eat();
+		mCat.speak();
 	}
 }
