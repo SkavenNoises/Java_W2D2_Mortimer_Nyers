@@ -54,11 +54,11 @@ interface VehicleControls {
 
 class Bike implements VehicleControls {
 	public void move(int i) {
-		System.out.println("Bike has travelled " + i + "Kilometers");
+		System.out.println("Bike has travelled " + i + " kilometers");
 	}
 
 	public void applyBreaks(int i) {
-		System.out.println("Bike has stopped with brakes across " + i + "meters");
+		System.out.println("Bike has stopped with brakes across " + i + " meters");
 	}
 }
 
@@ -78,6 +78,7 @@ public class Main {
 
 		System.out.println("");
 
+		System.out.println("Exercise 3 Output");
 		Bike mBike = new Bike();
 		mBike.move(25);
 		mBike.applyBreaks(2);
