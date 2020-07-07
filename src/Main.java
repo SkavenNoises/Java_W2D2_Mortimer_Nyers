@@ -43,21 +43,43 @@ class Cat implements Animal {
 }
 
 /*
-######################################################
+#########################################################
 Exercise 3
 #########################################################
 */
+interface VehicleControls {
+	public void move(int i);
+	public void applyBreaks(int i);
+}
 
+class Bike implements VehicleControls {
+	public void move(int i) {
+		System.out.println("Bike has travelled " + i + "Kilometers");
+	}
 
+	public void applyBreaks(int i) {
+		System.out.println("Bike has stopped with brakes across " + i + "meters");
+	}
+}
 
 public class Main {
 	public static void main(String[] args) {
+		System.out.println("Exercise 1 Output");
 		SpringerSpaniel mDog = new SpringerSpaniel();
 		mDog.eats();
 		mDog.bark();
 
+		System.out.println("");
+
+		System.out.println("Exercise 2 Output");
 		Cat mCat = new Cat();
 		mCat.eat();
 		mCat.speak();
+
+		System.out.println("");
+
+		Bike mBike = new Bike();
+		mBike.move(25);
+		mBike.applyBreaks(2);
 	}
 }
